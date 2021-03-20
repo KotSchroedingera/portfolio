@@ -1,0 +1,492 @@
+* {
+	box-sizing: border-box;
+}
+
+@color-font: #333333;
+@color-additional: #06A9B3;
+@font: 300 16px Montserrat;
+
+body {
+	font: @font; 
+	color: @color-font;
+	min-height: 100vh;
+}
+
+h2 {
+	font-weight: 700;
+	font-size: 32px;
+	line-height: 48px;
+	margin-bottom: 24px;
+}
+
+.header, 
+.footer {
+	background-color: #F2F8FB;
+}
+
+.container {
+	max-width: 1440px;
+	padding-right: 30px;
+	padding-left: 30px;
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	grid-gap: 23px;
+}
+
+.button {
+	background-color: @color-additional;
+	color: white;
+	height: 52px;
+	outline: none;
+	border: none;	
+	cursor: pointer;
+}
+
+.form {
+	label {
+		display: block;
+		font-size: 12px;
+		line-height: 16px;
+		padding-bottom: 6px;
+	}
+	input, 
+	select {
+		height: 44px;
+		border: 1px solid #CFDCE3;
+		padding: 12px 16px;
+		width: 100%;
+		border-radius: 0;
+		&::placeholder {
+			opacity: 0.3;
+		}
+		&:focus {
+			outline: none;
+			box-shadow: 0px 0px 3px #06a9b3;
+		}
+	}
+	.checkbox {
+		display: grid;
+		grid-template-columns: 30px auto;
+	}
+	input[type="checkbox"] {
+		opacity: 0;
+		& + label {
+			position: relative;
+			&::before {
+				position: absolute;
+				content: "";
+				display: block;
+				width: 12px;
+				height: 12px;
+				left: -30px;
+				border: 3px solid white;
+				outline: 1px solid #CFDCE3;
+			}
+		}
+		&:checked + label::before {
+			background-color: @color-additional;
+		}
+	}
+}
+
+.heading-top {
+	grid-column: 5 ~"/" 9;
+	margin-top: 100px;
+	margin-bottom: 40px;
+	.up {
+		color: @color-additional;
+		margin-top: 0;
+		margin-bottom: 60px;
+		font-weight: 400;
+		span {
+			position: relative;
+			margin-right: 100px;
+			&::after {
+				position: absolute;
+				content: "";
+				display: block;
+				width: 84px;
+				height: 1px;
+				background: @color-additional;
+				top: 50%;
+				left: 155%;
+			}
+		}
+	}
+}
+
+.text {
+	line-height: 32px;
+}
+
+.side-text {
+	font-size: 14px;
+	line-height: 24px;
+  position: relative;
+}
+
+.quote {
+	font-weight: 400;
+	font-size: 22px;
+	line-height: 40px;
+	border-left: 2px solid @color-additional;
+	padding-left: 28px;
+}
+
+.menu {
+	line-height: 20px;
+	min-height: 80px;
+	&-items {
+		grid-column: 1 ~"/" 5; 
+		margin: 0;
+		padding: 0;
+		list-style-type: none;
+		display: flex;
+		justify-content: space-between; 
+		li:last-child {
+			margin-right: 60px;
+		}
+		a {
+			text-decoration: none;
+			color: @color-additional; 
+			display: inline-block;
+			height: 100%;
+			padding-top: 30px;
+		}
+	}
+	&-logo {
+		grid-column: 6 ~"/" 8;
+		margin: auto;
+		a {
+			height: 100%;
+		}
+	}
+	&-search {
+		grid-column: 8 ~"/" 11;
+		position: relative;
+		&-line {
+			display: none;
+		}
+		&::after {
+			content: "";
+			display: block;
+			position: absolute;
+			width: 16px;
+			height: 16px;
+			background: url("../img/search.svg") center no-repeat;
+			top: 32px;
+			right: 19px;
+			cursor: pointer;
+		}
+	}
+	&-cabinet {
+		grid-column: 11 ~"/" 13;
+		text-align: right;
+		padding-top: 30px;
+		a {
+			color: @color-additional;
+			text-decoration: none; 
+		}
+	}
+}
+
+.cover {
+	padding-bottom: 100px;
+	&.container {
+		grid-template-rows: auto 64px;
+		grid-row-gap: 0;
+	}
+	.offer {
+		grid-area: 1 ~"/" 2 ~"/" 2 ~"/" 8; 	
+		z-index: 10;
+		margin-top: 80px;
+		.city {
+			font-weight: 400;
+			opacity: 0.3;
+			margin-bottom: 8px;
+		}
+		h1 {
+			font-size: 44px;
+			font-weight: 700;
+			margin-bottom: 12px;
+		}
+		.proposal {
+			font-weight: 400;
+			font-size: 22px;
+			line-height: 34px;
+			margin-bottom: 40px;
+		}
+		.rent {
+			width: 204px;	
+			margin-bottom: 68px;
+		}
+	}	
+	.social-icons {
+		grid-area: 2 ~"/" 2 ~"/" 3 ~"/" 5;
+		display: grid;
+		grid-template-columns: repeat(3, 44px);
+		grid-column-gap: 70px;
+		.icon {
+			width: 44px;
+			height: 44px;
+			background-color: #CFDCE3;
+			border-radius: 50%;
+			margin-top: 10px;
+			background-position: center;
+			background-repeat: no-repeat;
+			cursor: pointer;
+			&:hover {
+				background-color: #06a9b3;
+			}
+			&.facebook {
+				background-image: url(../img/fb.svg);
+				background-position: center 9px;
+			}
+			&.instagram {
+				background-image: url(../img/inst.svg);
+			}
+			&.vk {
+				background-image: url(../img/vk.svg);
+			}
+		}
+	}
+	.slider {
+		grid-area: 1 ~"/" 6 ~"/" 3 ~"/" 13;
+		position: relative;
+		.picture {
+			position: absolute;
+			height: 496px;
+			width: 100%;
+			background: url(../img/cover-home.jpg) top no-repeat;
+			top: 0;
+			left: 0; 
+		}
+		.arrows {
+			position: absolute;
+			width: 210px;
+			height: 64px;
+			background-color: white;
+			bottom: -2px;
+			display: flex;
+			cursor: pointer;
+			.left, 
+			.right {
+				height: 100%;
+				width: 50%;
+				position: relative;
+				background: url(../img/arrow-off.svg) center no-repeat; 
+			}
+			.on {
+				background: url(../img/arrow-on.svg) center no-repeat;
+			}
+			.left {
+				transform: rotate(180deg);
+				&::after {
+					position: absolute;
+					content: "";
+					display: block;
+					left: 0;
+					top: 16px;
+					width: 2px;
+					height: 32px;
+					background-color: #EAF2F6; 
+				}
+			}
+		}
+		.number {
+			font-size: 32px;
+			font-weight: 400;
+			color: white;
+			position: absolute;
+			right: 30px;
+			bottom: 15px;
+		}
+	}
+}
+
+.main {
+	padding-top: 100px;
+	.heading-top {
+		margin-top: 0;
+		position: relative;
+		&::before {
+			position: absolute;
+			content: "01"; 
+			font-weight: 700;
+			font-size: 64px;
+			color: #EAF2F6;
+			top: -10px;
+			left: -345px;
+		}
+		&::after {
+  	 	position: absolute;
+			content: "Место"; 
+			font-weight: 700;
+			font-size: 64px;
+			color: #EAF2F6;
+			writing-mode: vertical-lr;
+	 		transform: scale(-1, -1);
+	 		top: 100px;
+	 		left: -350px; 
+		}
+	}
+	.text {
+		grid-column: 5 ~"/" 9;
+	}
+	.with-side-text {
+		grid-column: 1 ~"/" 13;
+		.container {
+			padding: 0;
+		}
+		.core-element {
+			grid-column: 5 ~"/" 9;
+		}
+		.side-text {
+			margin-top: 0;
+			&.left {
+				grid-column: 2 ~"/" 4;
+			}
+			&.right {
+				grid-column: 10 ~"/" 12;
+			}
+		}
+	}
+	.image-full {
+		grid-column: 2 ~"/" 12; 
+		overflow: hidden;
+	}
+	.quote {
+		grid-column: 4 ~"/" 10;
+	}
+	.book {
+		grid-column: 5 ~"/" 8;
+		margin-top: 40px;
+		margin-bottom: 100px;
+	}
+}
+
+.houses {
+	background-color: #F2F8FB;
+	padding-bottom: 140px;
+	.heading-top {
+		text-align: center;
+	}
+	.house {	
+		grid-column: span 3;
+		&-picture {
+			overflow: hidden;
+		}
+		&-desc {
+			padding: 24px;
+			background-color: white;
+		}
+		&-long {
+			grid-column: 3 ~"/" 11; 
+			margin-top: 24px;
+			display: flex;
+			height: 198px;
+			&-desc {
+				width: 100%;
+			}
+		}
+		&-title {
+			font-weight: 400;
+			font-size: 22px;
+			margin-bottom: 10px;
+		}
+		&-area {
+			font-weight: 400;
+			opacity: 0.3;
+			margin-bottom: 20px;
+		}
+		&-rooms {
+			border-top: 2px solid #EAF2F6;
+			padding-top: 16px;
+			ul {				
+				display: flex;
+				justify-content: space-between;
+				list-style-type: none;
+				padding: 0;
+				margin: 0;
+			}
+			&-number {
+				font-size: 32px;
+			}
+		}
+	}
+}
+
+.feedback {
+	&-info {
+		grid-column: 2 ~"/" 6;
+	}
+	&-image {
+		grid-column: 7 ~"/" 13;
+		overflow: hidden;	
+		font-size: 0;
+	}
+	&-form {
+		display: grid;
+		grid-template-columns: repeat(6, 1fr);
+		grid-column-gap: 24px;
+	  grid-row-gap: 20px;
+		grid-template-areas: 
+			"appeal appeal name name surname surname"
+			"mail mail mail mail mail mail"
+			"phone phone phone phone phone phone"
+			"personal personal personal subscribe subscribe subscribe"
+			"submit submit submit . . .";
+		.appeal {
+			grid-area: appeal;
+		} 
+		.name {
+			grid-area: name;
+		}
+		.surname {
+			grid-area: surname;
+		}
+		.mail {
+			grid-area: mail;
+		}
+		.phone {
+			grid-area: phone;
+		}
+		.personal-data {
+			grid-area: personal;
+		}
+		.subscribe {
+			grid-area: subscribe;
+		}
+		.submit {
+			grid-area: submit;
+			width: 155px;
+		}
+	}
+}
+
+.menu-bottom {
+	.container {
+		height: 80px;
+	}
+	.menu {
+		&-logo {
+			grid-column: 1 ~"/" 2;
+		}
+		&-items {
+			grid-column: 5 ~"/" 9;
+		}
+		&-made-in {
+			grid-column: 10 ~"/" 13;
+			padding-top: 30px;
+			text-align: right;
+			span {
+				opacity: 0.3;
+			}
+			a {
+				text-decoration: none;
+				color: @color-additional; 
+			}
+		} 
+	}
+}

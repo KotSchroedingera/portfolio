@@ -1,0 +1,126 @@
+html {
+  font-size: 10px;
+  color: #292929;
+}
+textarea {
+  resize: none;
+}
+.body {
+  font-family: 'Proxima Nova', Helvetica, sans-serif;
+  font-weight: normal;
+}
+.container {
+  position: relative;
+}
+.container-resize {
+  max-width: 1320px;
+}
+.button {
+  background-color: #fdb303;
+  color: #ffffff;
+  border: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1.6rem;
+  border-radius: 8px;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  height: 6.5rem;
+  width: 100%;
+  -webkit-box-shadow: 0px 8px 13px 0px rgba(0, 0, 0, 0.04);
+          box-shadow: 0px 8px 13px 0px rgba(0, 0, 0, 0.04);
+}
+.button:hover,
+.button:focus {
+  background-color: #e5a202;
+}
+.section {
+  padding: 8rem 0;
+}
+.section-heading {
+  text-align: center;
+  font-weight: bold;
+  font-size: 3.6rem;
+  margin: 6rem auto 10rem;
+}
+.section-heading h2 {
+  font-size: 3.6rem;
+  font-weight: bold;
+  margin-bottom: 0;
+  margin: auto;
+}
+.section-heading p {
+  font-size: 1.9rem;
+  font-weight: normal;
+  margin-top: 3rem;
+}
+.form {
+  background-color: #ffffff;
+  padding: 4rem 4.9rem;
+  text-align: center;
+}
+.form-header {
+  font-size: 1.8rem;
+  margin-bottom: 4rem;
+}
+.form-header strong {
+  font-size: 1.9rem;
+}
+.form-input {
+  height: 5.5rem;
+  display: block;
+  border: 1px solid #dddddd;
+  width: 100%;
+  padding: 1.7rem;
+  margin: 2rem 0;
+  border-radius: 5px;
+  font-size: 1.8rem;
+}
+.form-button {
+  display: block;
+  width: 100%;
+  font-size: 1.6rem;
+}
+.form label {
+  display: inline-block;
+  background-color: #ffffff;
+  padding: 0.5rem;
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 1.3rem;
+}
+.form small {
+  display: block;
+  padding: 1rem 1.5rem;
+  font-size: 1.2rem;
+}
+.link-underlined {
+  color: #292929;
+  border-bottom: 1px solid #292929;
+}
+.link-underlined:hover {
+  color: #101010;
+  text-decoration: none;
+}
+.slick-active,
+.slick-current {
+  outline: none;
+}
+.slick-slider:focus {
+  outline: none !important;
+}
+.slick-slider .prev,
+.slick-slider .next {
+  position: absolute;
+  z-index: 100;
+  cursor: pointer;
+  display: block;
+}
+.slick-slider .prev {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+.slick-slider .next {
+  right: 0;
+}

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/catalog.css">
+  <title>Denim Shop Catalog</title>
+  <script type="text/javascript" src="js/includeHTML-master/includeHTML.js"></script>
+</head>
+<body>
+
+  <div id="include-header"></div>
+  <script>
+   includeHTML('html/header.html', document.getElementById('include-header'));
+  </script>
+
+  <main>
+
+    <section class="category-heading">
+      <div class="container container--grid">
+        <ul class="breadcrumbs">
+          <li class="breadcrumbs__item"><a href="catalog.html">All categories</a></li>
+          <li class="breadcrumbs__item"><a href="catalog.html">Woman</a></li>
+          <li class="breadcrumbs__item"><a href="catalog.html">Jackets</a></li>
+        </ul>
+
+        <h1 class="category-name">
+          Denim Collection<br>Fall 2019
+        </h1>
+
+        <div class="category-banner__wrapper">
+          <img class="category-banner__image" src="img/61-1.jpg" alt="promo"></div>
+      </div>
+    </section> 
+
+    <section class="products">
+      <div class="container filter">
+        <form action="#" class="filter__form">
+          <select name="filter" id="filter-by" class="filter__select">
+            <option value="price-low-to-high">Price: low to high</option>
+            <option value="price-high-to-low">Price: high to low</option>
+          </select>
+        </form>
+      </div>
+
+      <div class="container container--flex container--products">
+        <a class="product--flex" href="product.html">
+          <img src="img/products/9-1.jpg" alt="denim" class="product__image">
+          <h3 class="product__name">
+            Jacket
+          </h3>
+          <p class="product__price">
+            $40
+          </p>
+        </a>
+
+        <a class="product--flex" href="product.html">
+          <img src="img/products/2-2.jpg" alt="denim" class="product__image">
+          <h3 class="product__name">
+            Jacket
+          </h3>
+          <p class="product__price">
+            $60
+          </p>
+        </a>
+
+        <a class="product--flex" href="product.html">
+          <img src="img/products/4-1.jpg" alt="denim" class="product__image">
+          <h3 class="product__name">
+            Jacket
+          </h3>
+          <p class="product__price">
+            $60
+          </p>
+        </a>
+
+        <a class="product--flex" href="product.html">
+          <img src="img/products/11-1.jpg" alt="denim" class="product__image">
+          <h3 class="product__name">
+            Jacket
+          </h3>
+          <p class="product__price">
+            $50
+          </p>
+        </a>
+
+        <a class="product--flex" href="product.html">
+          <img src="img/products/15-1.jpg" alt="denim" class="product__image">
+          <h3 class="product__name">
+            Jacket
+          </h3>
+          <p class="product__price">
+            $40
+          </p>
+        </a>
+
+        <a class="product--flex" href="product.html">
+          <img src="img/products/1-6.jpg" alt="denim" class="product__image">
+          <h3 class="product__name">
+            Jacket
+          </h3>
+          <p class="product__price">
+            $110
+          </p>
+        </a>
+
+        <a class="product--flex" href="product.html">
+          <img src="img/products/3-1.jpg" alt="denim" class="product__image">
+          <h3 class="product__name">
+            Jacket
+          </h3>
+          <p class="product__price">
+            $35
+          </p>
+        </a>
+
+        <a class="product--flex" href="product.html">
+          <img src="img/products/13-1.jpg" alt="denim" class="product__image">
+          <h3 class="product__name">
+            Jacket
+          </h3>
+          <p class="product__price">
+            $85
+          </p>
+        </a>
+      </div>
+
+      <div class="container">
+        <div class="pagination">
+          <p class="pagination__text">
+            Showing 9 of 45 items
+          </p>
+          <progress class="pagination__bar" value="9" max="45"></progress>
+          <button class="button">
+            Load more
+          </button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div id="include-footer"></div>
+  <script>
+   includeHTML('html/footer.html', document.getElementById('include-footer'));
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+.header {
+  height: 67px;
+}
+.header__logo {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+.site-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-weight: 500;
+}
+.site-nav__item:not(:last-of-type) {
+  margin-right: 35px;
+}
+.user-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.user-nav__item {
+  background: transparent;
+  cursor: pointer;
+}
+.user-nav__item:not(:last-of-type) {
+  margin-right: 35px;
+}

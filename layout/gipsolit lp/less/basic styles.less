@@ -1,0 +1,169 @@
+// Font Style
+.reg() {
+  font-family: 'Proxima Nova', Helvetica, sans-serif; 
+  font-weight: normal;
+}
+
+// Colors
+@color-icon: #46b814;
+@color-button: #fdb303;
+@color-font: #292929;
+@color-bg-grey: #f5f5f5;
+@color-light: white;
+@color-form-input: #dddddd;
+
+// Basic styles
+html {
+  font-size: 10px;
+  color: @color-font;
+}
+
+textarea {
+  resize: none;
+}
+
+.body {
+  .reg();
+}
+
+.container {
+  position: relative;
+}
+
+// Resize container, if needed
+.container-resize {
+  max-width: 1320px;
+}
+
+.button {
+  background-color: @color-button;
+  color: @color-light;
+  border: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1.6rem;
+  border-radius: 8px; 
+  transition: all 0.2s;
+  height: 6.5rem;
+  width: 100%;
+  box-shadow: 0px 8px 13px 0px rgba(0, 0, 0, 0.04);
+
+  &:hover, 
+  &:focus {
+    background-color: darken(@color-button, 5%);
+  }
+}
+
+.section {
+  padding: 8rem 0;
+  
+  &-heading {
+    text-align: center;
+    font-weight: bold;
+    font-size: 3.6rem;
+    margin: 6rem auto 10rem;
+
+    h2 {
+      font-size: 3.6rem;
+      font-weight: bold;
+      margin-bottom: 0;
+      margin: auto;
+    }
+
+    p {
+      font-size: 1.9rem;
+      font-weight: normal;
+      margin-top: 3rem;
+    }
+  }
+}
+
+.form {
+  background-color: @color-light;
+  padding: 4rem 4.9rem;
+  text-align: center;
+
+    &-header {
+      font-size: 1.8rem;
+      margin-bottom: 4rem;
+      
+      strong {
+        font-size: 1.9rem;
+      }
+    }
+
+  &-input {
+    height: 5.5rem;
+    display: block;
+    border: 1px solid @color-form-input;
+    width: 100%;
+    padding: 1.7rem; 
+    margin: 2rem 0;
+    border-radius: 5px;
+    font-size: 1.8rem;
+  }
+
+  &-button {
+    display: block;
+    width: 100%;
+    font-size: 1.6rem;    
+  }
+
+  label {
+    display: inline-block;
+    background-color: @color-light;
+    padding: 0.5rem;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    font-size: 1.3rem;
+  }
+
+  small {
+    display: block;
+    padding: 1rem 1.5rem;
+    font-size: 1.2rem;
+  }
+}
+
+.link-underlined {
+  color: @color-font;
+  border-bottom: 1px solid #292929;
+  &:hover {
+    color: darken(@color-font, 10%);
+    text-decoration: none;
+  }
+}
+
+
+
+// Slick slider
+.slick {
+
+  &-active, 
+  &-current {
+    outline: none;
+  }
+
+  &-slider {
+
+    &:focus {
+      outline: none !important;
+    }
+
+    .prev,
+    .next {
+      position: absolute;
+      z-index: 100;
+      cursor: pointer;
+      display: block;
+    }
+
+    .prev {
+      transform: rotate(180deg);
+    }
+
+    .next {
+      right: 0;
+    }
+  }
+}

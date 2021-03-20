@@ -1,0 +1,29 @@
+.header {
+  height: 67px;
+  &__logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.site-nav {
+  display: flex;
+  font-weight: 500;
+  &__item {
+    &:not(:last-of-type) {
+      margin-right: 35px; 
+    }
+  }
+}
+
+.user-nav {
+  display: flex;
+  &__item {
+    background: transparent;
+    cursor: pointer;
+    &:not(:last-of-type) {
+      margin-right: 35px;
+    }
+  }
+}

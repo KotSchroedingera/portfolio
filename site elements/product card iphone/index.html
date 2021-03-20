@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@400;500&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/main.css">
+	<title>Card</title>
+</head>
+<body>
+
+  <main class="product">
+    <div class="container">
+      <ul class="gallery">
+        <li class="gallery__left">
+          <img src="img/photo 1.jpg" alt="iphone photo">
+        </li>
+        <li class="gallery__left">
+          <img src="img/photo 2.jpg" alt="iphone photo">
+        </li>
+        <li class="gallery__left">
+          <img src="img/photo 3.jpg" alt="iphone photo">
+        </li>
+        <li class="gallery__left">
+          <img src="img/photo 4.jpg" alt="iphone photo">
+        </li>
+        <li class="gallery__main">
+          <img src="img/photo 5.jpg" alt="iphone photo">
+        </li>
+      </ul>
+      
+      <section class="info">
+        <h1 class="product__heading">Смартфон APPLE IPhone 11 Pro 512Gb, черный</h1>
+
+        <div class="row row--availability-rating-reviews">
+          <p class="availability">Есть в наличии</p>
+          <ul class="rating">
+            <li class="rating__star"></li>
+            <li class="rating__star"></li>
+            <li class="rating__star"></li>
+            <li class="rating__star"></li>
+            <li class="rating__star"></li>
+          </ul>
+          <p class="reviews"><a href="#" class="link link--disabled">246 отзывов</a></p>
+        </div>
+        
+        <div class="memory">
+          <h2 class="info__heading">Объем памяти</h2>
+          <form action="#" class="memory__form">
+            <div class="memory__list row">
+              <input type="radio" name="memory__value" value="64Gb" id="size-1">
+              <label for="size-1">64Gb</label>
+
+              <input type="radio" name="memory__value" value="128Gb" id="size-2" checked>
+              <label for="size-2">128Gb</label>
+
+              <input type="radio" name="memory__value" value="256Gb" id="size-3">
+              <label for="size-3">256Gb</label>
+
+              <input type="radio" name="memory__value" value="512Gb" id="size-4">
+              <label for="size-4">512Gb</label>
+            </div>
+          </form>
+        </div> 
+      
+        <div class="color">
+          <h2 class="info__heading">Цвет</h2>
+          <form action="#" class="color__form">
+            <div class="color__list row">
+                <input type="radio" name="color__value" value="black" id="color-1">
+                <label for="color-1"></label>
+
+                <input type="radio" name="color__value" value="green" id="color-2">
+                <label for="color-2"></label>
+    
+                <input type="radio" name="color__value" value="yellow" id="color-3">
+                <label for="color-3"></label>
+  
+                <input type="radio" name="color__value" value="grey" id="color-4">
+                <label for="color-4"></label>
+
+                <input type="radio" name="color__value" value="red" id="color-5">
+                <label for="color-5"></label>
+
+                <input type="radio" name="color__value" value="beige" id="color-6" checked>
+                <label for="color-6"></label>
+              </li>
+            </div>
+          </form>
+        </div>
+
+        <div class="specifications">
+          <table>
+             <tr>
+              <th>
+                <h2 class="info__heading">Характеристики</h2>
+              </th>
+              <th>
+                <a class="specifications__all link" href="#">
+                  Все характеристики
+                </a>
+              </th>
+             </tr>
+             <tr><td>Диагональ экрана, в дюймах: </td><td>5.8</td></tr>
+             <tr><td>Разрешение экрана, в пикселях: </td><td>2436x1125</td></tr>
+             <tr><td>Встроенная память, в Гб: </td><td>512</td></tr>
+             <tr><td>Оперативная память, в Гб: </td><td>4</td></tr>
+             <tr><td>Емкость аккумулятора, в мА-ч: </td><td>3046</td></tr>
+             <tr><td>Количество основных камер: </td><td>три</td></tr>
+             <tr><td>Год выхода модели: </td><td>2019</td></tr>
+             <tr><td>Тип дисплея: </td><td>Тип дисплея:</td></tr>
+          </table>
+        </div>
+
+        <div class="price row">
+          <h2 class="info__heading">Цена:</h2>
+          <p class="product__price">107 990</p>
+        </div>
+
+        <button class="button button--buy">Добавить в корзину</button>
+        <button class="button button--credit" disabled>Рассрочка от <span>10 800 ₽ / месяц</span></button>
+
+      </section>
+
+      <section class="description">
+        
+        <ul class="sections__list">
+          <li class="sections__heading sections__heading--active"><p>Описание</p></li>
+          <li class="sections__heading">Характеристики</li>
+          <li class="sections__heading">Аксессуары</li>
+          <li class="sections__heading">Отзывы</li>
+          <li class="sections__heading">Вопрос-ответ</li>
+        </ul>     
+
+        <div class="sections__text">
+          <p>
+            Смартфон iPhone 11 Pro 512Gb в корпусе черного цвета понравится пользователям не только большим объемом встроенной памяти. Гаджет нового поколения оснащен высокими технологиями будущего. Корпус модели теперь еще более усилен. 
+          </p>
+          <p>
+            Стекло обработано методом двойного ионного обмена. Водозащита позволяет выдержать четырехметровые волны. Главной особенностью модели iPhone 11 Pro является новая система трех камер, за счет слаженной работы которых удается создать фотографии профессионального качества. Область изображения увеличивается в 4 раза. Портретные фото, селфи и снимки движущихся объектов – все получается намного ярче. Режим ночной съемки включается автоматически, результат – контрастные фото с естественной цветопередачей.
+          </p>
+          <p>
+            Удивительно реалистичные видеоролики позволяют снимать мощный процессор и технологии машинного обучения. Изображение редактируется в режиме реального времени — выразительные лица и никакого шума    на заднем фоне.
+          </p>
+        </div>
+
+      </section>
+
+
+    </div>
+  </main>
+
+</body>
+</html>

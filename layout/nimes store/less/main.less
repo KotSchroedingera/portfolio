@@ -1,0 +1,115 @@
+@import "normalize.less";
+@import "layout.less";
+@import "components.less";
+@import "header.less";
+@import "footer.less";
+
+// First Screen
+
+.first-screen {
+  background: #F1F2F4;
+  margin-bottom: 130px;
+} 
+
+.promo {
+  &-text {
+    grid-column: 3 ~"/" 6;
+    margin-left: -30px;
+    margin-top: 192px;
+    margin-bottom: 169px;
+    &__lead {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+    &__logo {
+      margin-bottom: 20px;
+    }
+    .button {
+      padding-right: 24px;
+      padding-left: 24px;
+    }
+  }
+  &-image {
+    &__wrapper {
+      grid-column: 6 ~"/" -2;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      text-align: center;
+      position: relative;
+      img {
+        position: relative;
+        z-index: 10;
+      }
+      &::before, 
+      &::after {
+        position: absolute;
+        content: "";
+        display: block;
+         z-index: 0;
+         width: 232px;
+        height: 176px;
+        background: url(../img/diagonal-top.svg) center no-repeat;
+      }
+      &::before {
+        top: 0px;
+        left: 20px;
+      }
+      &::after {
+        right: 20px;
+        bottom: 0;
+        transform: scale(1, -1);
+      }
+    }
+  }
+}
+
+.news {
+  &-image {
+    grid-column: 1 ~"/" span 7;
+    margin-right: -30px;
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+  &-text {
+    grid-column: -6 ~"/" -1;  
+    background-image: url(../img/news-diagonal.svg);
+    &__wrapper {
+      margin-top: 30px;
+      margin-right: 70px;
+      margin-bottom: 34px;
+      background: #F1F2F4;
+      padding-top: 52px;
+      padding-bottom: 28px;
+      padding-left: 43px;
+      padding-right: 47px;
+    }
+    &__heading {
+      font-weight: bold;
+      font-size: 24px;
+      line-height: 28px;
+      margin-bottom: 27px;
+    }
+    &__date {
+      font-size: 18px;
+      line-height: 21px;
+      margin-bottom: 13px;
+      display: block;
+    }
+    &__lead {
+      font-size: 18px;
+      line-height: 21px;
+      color: #727A82;
+      margin-bottom: 24px;
+    } 
+  }
+}
+
+.categories {
+  margin-bottom: 130px;
+  .product__name {
+    margin-bottom: 0;
+  }
+}
+

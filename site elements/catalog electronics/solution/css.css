@@ -1,0 +1,310 @@
+body {
+  margin: 0;
+  background-color: #ffffff;
+  color: #001524;
+  font-family: "M PLUS 1p", "Arial", sans-serif;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+/* утилитные классы */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+/* компонент - ссылка */
+.link {
+  transition: color 0.2s ease-in-out 0s;
+  color: #001524;
+}
+
+.link:visited {
+  /*color: #99A1A7;*/ /* потому что ссылки нет, раскоментить, когда будет настоящая ссылка */
+}
+
+.link:hover {
+  transition: color 0.2s ease-in-out 0s;
+  color: #de012c;
+}
+
+.link:focus,
+.link:active {
+  transition: color 0.2s ease-in-out 0s;
+  text-decoration-color: #c20127;
+}
+
+/* компонент - кнопка */
+.btn {
+  box-sizing: border-box;
+  padding: 0;
+  border: 0 none;
+  background: none;
+  cursor: pointer;
+}
+
+/* компоненты */
+/* компонент - контейнер для карточек */
+.card-list-container {
+  display: flex;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+  min-width: 1366px;
+  max-width: 1366px;
+  margin: 1em auto 0;
+  padding: 98px;
+  list-style: none;
+}
+
+.card-list-container__item {
+  box-sizing: border-box;
+  flex-basis: calc((100% - 3 * 30px) / 4);
+  height: 414px;
+  max-height: 414px;
+  margin-bottom: 30px;
+}
+
+.card-list-container__item:not(:nth-of-type(4n)) {
+  margin-right: 30px;
+}
+
+/* компонент - карточка в списке карточек */
+.card-item {
+  position: relative;
+  box-sizing: border-box;
+  height: 100%;
+  padding: 20px 10px;
+  transition: all 0.2s ease-in-out 0s;
+  background-color: #ffffff;
+  box-shadow: 0 4px 15px rgba(157, 162, 166, 0.12);
+}
+
+.card-item::before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: all 0.2s ease-in-out 0s;
+  background-color: #ffffff;
+}
+
+.card-item:hover {
+  transition: all 0.2s ease-in-out 0s;
+}
+
+.card-item:hover::before {
+  top: -15px;
+  left: -15px;
+  padding: 15px;
+  transition: all 0.2s ease-in-out 0s;
+  box-shadow: 0 4px 20px rgba(157, 162, 166, 0.35);
+}
+
+/* из-за before */
+.card-item > * {
+  position: relative;
+  z-index: 1;
+}
+
+.card-item__chevron {
+  position: absolute;
+  z-index: 2;
+  top: 10px;
+  left: 10px;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0.4em 0.8em;
+  border: 1px solid #000000;
+  background-color: #ffffff;
+  color: #001524;
+  font-family: "M PLUS 1p", "Arial", sans-serif;
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.card-item__chevron--info {
+  border-color: #5ebad9;
+}
+
+.card-item__chevron--hit {
+  border-color: #8962f8;
+}
+
+.card-item__chevron--sale {
+  border-color: #fb212f;
+}
+
+.card-item__link {
+  display: block;
+  height: 171px;
+  margin-bottom: 2.2em;
+}
+
+.card-item__img {
+  display: block;
+  width: auto;
+  max-height: 100%;
+  margin: 0 auto;
+}
+
+.card-item__price {
+  margin: 0 0 0.6em;
+  color: #001524;
+  font-family: "M PLUS 1p", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.card-item__price s {
+  margin-left: 1em;
+  color: #797d80;
+  font-family: "M PLUS 1p", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.card-item__title {
+  margin: 0 0 1em;
+  color: #001524;
+  font-family: "M PLUS 1p", "Arial", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.card-item__info {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 2.4em;
+}
+
+.card-item__availability {
+  position: relative;
+  box-sizing: border-box;
+  margin: 0 auto 0 0;
+  padding-left: calc(13px + 0.6em);
+  color: #001524;
+  font-family: "M PLUS 1p", "Arial", sans-serif;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.card-item__availability--yes::before {
+  content: url("img/svg/ok.svg");
+  display: block;
+  position: absolute;
+  top: 0;
+  left: -1px;
+  width: 13px;
+  height: 13px;
+}
+
+/* аналогично, но свг означающий, что предмета нет в наличии*/
+.card-item__availability--no {
+}
+
+.card-item__rating {
+  position: relative;
+  box-sizing: border-box;
+  margin: 0;
+  padding-left: calc(13px + 0.6em);
+  color: #001524;
+  font-family: "M PLUS 1p", "Arial", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.card-item__rating::before {
+  content: url("img/svg/star.svg");
+  display: block;
+  position: absolute;
+  top: 1px;
+  left: 0;
+  width: 13px;
+  height: 13px;
+}
+
+.card-item__link-to-reviews {
+  margin-left: 0.9em;
+  color: #797d80;
+  font-family: "M PLUS 1p", "Arial", sans-serif;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.card-item__button-block {
+  display: flex;
+  align-items: center;
+}
+
+.card-item__button {
+  width: 170px;
+  height: 35px;
+  margin-right: 1.4em;
+  padding: 0;
+  border: 1px solid #de012c;
+  border-radius: 4px;
+  background-color: #de012c;
+  color: #ffffff;
+  font-family: "M PLUS 1p", "Arial", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: calc(35px - 1px * 2);
+  text-align: center;
+}
+
+.card-item__button:enabled:hover,
+.card-item__button:enabled:focus,
+.card-item__button:enabled:active {
+  transition: all 0.2s ease-in-out 0s;
+}
+
+.card-item__button:enabled:hover {
+  background-color: #c20127;
+}
+
+.card-item__button:enabled:focus,
+.card-item__button:enabled:active {
+  border: 1px solid #001524;
+  background-color: #de012c;
+}
+
+.card-item__button:disabled {
+  border-color: #e6e3e4;
+  background-color: #e6e3e4;
+  color: #b3b1b2;
+}
+
+.card-item__favourite {
+  width: 20px;
+  height: 20px;
+  margin-right: 1em;
+  background: url("img/svg/heart.svg") 0 0 transparent no-repeat;
+}
+
+.card-item__compare {
+  width: 20px;
+  height: 20px;
+  background: url("img/svg/compare.svg") 0 0 transparent no-repeat;
+  cursor: pointer;
+  appearance: none;
+}
+
+.card-item__compare:checked {
+  background-image: url("img/svg/compare-checked.svg");
+}

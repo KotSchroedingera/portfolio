@@ -1,0 +1,589 @@
+@import url('../fonts/Proxima Nova/stylesheet.less');
+@import url('basic styles.less');
+
+// Section First Screen
+.header {
+	background: url(../img/main-bg.png) center center no-repeat;
+	background-size: cover;
+	padding-top: 0;
+}
+
+.main {
+
+	&-menu {
+		padding: 1.5rem 0;
+		display: flex;
+		align-items: center;
+
+		&-phone {
+			font-size: 2rem;
+			font-weight: bold;
+			text-align: right;
+			padding-right: 45px;
+
+			a {
+				color: @color-font;
+				position: relative;
+			}
+		}
+
+		&-button {
+			position: relative;
+  		right: 15px;
+		}
+	}
+
+	&-content {
+		margin-top: 7.5rem;
+
+		&-title {
+			font-size: 4rem;
+			text-transform: uppercase;
+			font-weight: bold;
+			margin-bottom: 2.6rem;
+			line-height: 1.45;
+		}
+
+		&-offer {
+			display: inline-block;
+			padding: 1.7rem 4.7rem;
+			background-color: @color-icon;
+			font-size: 1.8rem;
+			color: @color-light;
+			text-align: center;
+
+			strong {
+				font-size: 3rem;
+				font-weight: bold;
+			}
+		}
+
+		&-subtitle {
+			font-size: 2.4rem;
+			margin-bottom: 4.8rem;
+		}
+
+		&-trigger {
+			font-size: 2.2rem;
+			text-transform: uppercase;
+			font-weight: bold;
+			display: block;
+			margin: 3rem 0;
+		}
+	}
+}
+// End Section First Screen
+
+// Section Features
+.features {
+	margin: auto;
+	width: 100%;
+
+	&-list {
+
+		.feature {
+			text-align: center;
+
+			&-icon {
+				margin-bottom: 6.5rem;
+				height: 70px;
+
+				picture > * {
+					display: inline-block;
+				}
+			}
+
+			&-header {
+				font-weight: bold;
+				font-size: 2rem;
+				margin-bottom: 4rem;
+			}
+
+			&-text {
+				font-weight: 300;
+				font-size: 1.6rem;
+				width: 95%;
+				margin: auto;
+
+				a {
+					color: @color-icon;
+					text-decoration: underline; 
+				}
+			}
+		}
+
+		.slick-arrow {
+			top: 30%;
+      height: 30px;
+      width: 30px;
+		}
+
+	}
+}
+// End Section Features
+
+// Section Prices
+.prices {
+	background: @color-icon url('../img/prices/bg.jpg') repeat;
+	color: @color-light;
+
+	&-button {
+		position: relative;
+		top: 8rem; 
+	}
+
+	&-item {
+		background-color: @color-light;
+		color: @color-font;
+		text-align: center;
+		padding: 4.5rem;
+		min-height: 70rem;
+		position: relative; 
+
+		&-heading {
+			font-size: 1.7rem;
+			font-weight: bold;
+			margin-bottom: 3rem;
+		}
+
+		&-img {
+			width: 100%;
+			margin-bottom: 3rem;
+		}
+
+		&-price {
+			font-weight: bold;
+			font-size: 1.9rem;
+			margin-bottom: 2rem;
+
+			span {
+				font-size: 3rem;
+			}
+		}
+
+		&-list {
+			list-style-type: none;
+			font-size: 1.8rem;
+			line-height: 3rem;
+			padding-left: 0;
+			min-height: 17rem;
+
+			li::before {
+				display: inline-block;
+				position: relative;
+				content: '';
+				width: 2rem;
+				height: 2rem;
+				background: url('../img/checked.svg') no-repeat;
+				background-size: contain;
+				top: 5px;
+				right: 5px;
+			}
+		}
+
+		&-button {
+			width: 20.9rem;
+			height: 6.5rem;
+			position: absolute;
+			bottom: 4.5rem;
+			transform: translateX(-50%);
+		}
+	} 
+}
+// End Section Prices
+
+// Section Feedback
+.feedback {
+	background: @color-light url('../img/wall_bg.png') repeat; 
+	position: relative;
+
+	&-slider {
+		background-color: @color-light;
+  	box-shadow: 0px 12px 18px 0px rgba(0, 0, 0, 0.11);
+  	padding: 4.4rem 6rem;
+  	margin-bottom: 6rem;
+
+	}	
+
+	.review {
+		font-size: 1.6rem;
+
+		&-object {
+			margin-bottom: 3rem;
+		}
+
+		&-client {
+			display: flex;
+			margin-bottom: 2rem;
+
+			.avatar {
+				margin-right: 2rem;
+			}
+		}
+
+		&-quote {
+			font-size: 1.5rem;
+			font-style: italic;
+			border: 2px solid #00c000;
+			padding: 1.5rem;
+			position: relative;
+
+			&::before {
+				content: "";
+				position: absolute;
+				display: block;
+				width: 22px;
+				height: 12px;
+				background: transparent url("../img/feedback/feedback_quote_arrow.png") no-repeat;
+				top: -12px;
+				left: 35px; 
+
+			}
+		}
+	}
+
+	.slick-arrow {
+		top: 50%;
+		transform: translateY(-30px); 
+
+		&.prev {
+			transform: translateY(-30px) rotate(180deg);
+			left: -50px;
+		}
+		&.next {
+			right: -50px; 
+		}
+	}
+
+	.fotorama {
+
+		&__nav-wrap {
+			margin-top: 2rem;
+		}
+	}
+
+	.form {
+		padding: 5rem 11rem;
+
+		&-header {
+			font-size: 2.2rem;
+			font-weight: bold;
+			margin-bottom: 3rem;
+		}
+
+		&-button {
+			width: 25rem;
+			margin: 0 auto;
+			margin-top: 2rem;
+		}
+
+		label {
+			transform: translate(-50%, 19%);
+		}
+	}
+
+	& .container::after {
+		display: block;
+		position: absolute;
+		content: "";
+		width: 413px;
+    	height: 361px;
+		bottom: -8rem;
+		left: -10%; 
+		background: url('../img/feedback/feedback_hand.png') no-repeat;
+	}
+}
+// End Section feedback
+
+// section Scheme
+.scheme {
+	background: @color-light url('../img/scheme/hand.png') no-repeat;
+	background-position: 160% 100%;
+	&-step {
+		min-height: 32rem;
+	}
+	&-icon {
+		margin-bottom: 2rem;
+		width: 146px;
+		height: 105px;
+	}
+	&-title {
+		font-weight: bold;
+		font-size: 2.2rem;
+		margin-bottom: 2rem;
+	}
+	&-description {
+		font-size: 1.7rem;
+		line-height: 1.8rem;
+	}
+}
+// end section Scheme
+
+// section All Incl
+.all-incl {
+	background: @color-bg-grey;
+	.section-heading {
+		h2 {
+			color: #008100;
+			font-size: 4.8rem;
+		}
+	}
+	&-item {
+		display: inline-flex;
+	}
+	.circle-border {
+		width: 4.8rem;
+		height: 4.8rem;
+		padding: 0.2rem;
+		background-color: transparent;
+		border: 2px solid #008100;
+		border-radius: 50%;
+		.circle {
+			background-color: #008100;
+			border-radius: 50%;
+			width: 4rem;
+			height: 4rem;
+			color: @color-light;
+			font-weight: bold;
+			font-size: 2rem;
+			line-height: 2;
+			padding-left: 1.4rem;	
+		}
+	}
+	.text {
+		margin-left: 2rem;
+		margin-top: 1.5rem;
+		min-height: 12rem;
+		.title {
+			font-size: 1.6rem;
+			font-weight: bold;
+			line-height: 1.8rem;
+			display: inline-block;
+			margin-bottom: 0.4rem;
+		}
+		.description {
+			font-size: 1.3rem;
+			line-height: 1.5rem;
+		}
+	}
+}
+// end section All Incl
+
+// section Problems
+.problems {
+	position: relative;
+	&-list {
+		border: 4px solid;
+		padding: 4rem;
+		margin-bottom: 10rem;
+	}
+	&-title {
+		font-size: 2.1rem;
+		font-weight: bold;
+		margin-bottom: 3rem;
+	}
+	&-items {
+		font-size: 1.6rem;
+		list-style-type: none;		
+		li {
+			margin-bottom: 2rem;
+			position: relative;
+			&::before {
+				content: "";
+				display: block;
+				width: 1.8rem;
+				height: 1.8rem;
+				position: absolute;
+				top: 4px;
+				left: -40px;
+			}
+		}
+	}			
+	&-bad {
+		border-color: rgba(45, 45, 45, .35); 
+		.problems-title {
+			color: rgba(45, 45, 45, .35);
+		}
+		.problems-items li::before {
+			background: url("../img/cancel.png") no-repeat;
+		}
+	}	
+	&-good {
+		border-color: #008100;
+		.problems-items li::before {
+			background: url("../img/checked.png") no-repeat;
+		}
+	}
+	&-girl {
+		position: absolute;
+		bottom: -8rem;
+		height: 90%;
+		left: 29%;
+	}
+}
+// end section Problems
+
+// section Material
+.materials {
+	&-list {
+		.material {
+			text-align: center;
+			margin-bottom: 6rem;
+			&-photo {
+				margin: auto;
+				margin-bottom: 1rem;
+				height: 180px;
+			}
+			&-name {
+				font-size: 2.2rem;
+				font-weight: bold;
+				margin-bottom: 2.5rem;
+			}
+			&-price {
+				font-size: 1.9rem;
+				margin-bottom: 4rem;
+				min-height: 6rem;
+			}
+		}
+	}
+	&-link {
+		font-size: 1.6rem;
+		color: @color-icon;
+		border-bottom: 2px solid #d8e8d9;
+		&:hover {
+			color: darken(@color-icon, 10%);
+			text-decoration: none;
+		}
+	}
+	&-purchase {
+		font-size: 2rem;
+		margin: auto;
+	}
+	.slick-arrow {
+			top: 30%;
+      height: 30px;
+      width: 30px;
+	}
+}
+// end section Materials
+
+// section Tour
+.tour {
+	color: #242424;
+	background: #ededff url('../img/tour.jpg') no-repeat;
+	background-size: cover;
+	&-heading {
+		margin-top: 4rem;
+		h2 {
+			font-size: 4rem;
+			line-height: 5.8rem;
+			font-weight: bold;
+			margin-bottom: 4.5rem;
+			text-transform: uppercase;
+		}
+		p {
+			font-size: 2.4rem;
+		}
+	}
+	.form {
+		margin-top: 4rem;
+	}
+}
+// end section Tour
+
+// section Upsell
+.upsell {
+	background-color: #006b00;
+	color: #fcfcfc;
+	.section-heading {
+		margin-bottom: 7rem;
+	}
+	&-items {
+		text-align: center;
+	}
+	&-img {
+		width: 100%;
+		object-fit: cover;
+		max-width: 33rem;
+		max-height: 18rem;
+		margin-bottom: 3rem
+	}
+	&-name {
+		font-weight: bold;
+		font-size: 2rem;
+		margin-bottom: 3rem;
+	}
+	&-button {
+		width: 14.6rem;
+		height: 5.2rem;
+	}
+}
+// end section Upsell
+
+// section Contacts
+.contacts {
+	background: white url('../img/contacts-bg.jpg') center no-repeat;
+	background-size: cover;
+	background-position: 60% center;
+	.section-heading {
+		margin-top: 0;
+		text-align: left;
+		margin-bottom: 6.5rem;
+	}
+	p, 
+	.map {
+		font-size: 1.8rem;
+		margin-bottom: 3rem;
+	}
+	.form {
+		margin-top: 4rem;
+		textarea {
+			height: 100%; 
+		}
+		&-button {
+			font-size: 1.4rem;
+		}
+	}
+}
+// end section Contacts
+
+// footer
+.footer {
+	.container {
+		min-height: 14rem;
+	}
+	&-logo {
+		top: 36.5px;
+	}
+	&-contacts {
+		text-align: center;
+		top: 26px;
+		.phone {
+			font-weight: bold;
+			font-size: 2rem;
+		}
+		.email {
+			font-size: 1.7rem;
+			line-height: 2.4rem;
+		}
+	}
+	&-developer {
+		top: 34px;
+		text-align: right;
+		small {
+			text-align: right;
+			font-size: 1.1rem;
+		}
+		img {
+			position: relative;
+			top: -5px;
+		}
+	}
+}
+// end footer
+
+
+@import url('popups.less');
+@import url('media.less');
+
+
