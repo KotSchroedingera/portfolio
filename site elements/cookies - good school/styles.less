@@ -1,0 +1,157 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-weight: 400;
+  font-size: 16px;
+  font-family: Montserrat, Arial, sans-serif;
+  background-color: white;
+  color: #000C22;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1110px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(12, 5.855855855%);
+  grid-column-gap: 30px;
+}
+
+.header {
+  background: rgba(8, 15, 39, 1);
+  color: white;
+  .container {
+    grid-template-rows: 110px auto 110px;
+  }
+}
+
+.main-nav {
+  grid-column: 1 ~"/" -1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  &-menu {
+    display: flex;
+    li {
+      margin-right: 30px;
+      font-weight: 600;
+      font-size: 20px;
+      &:last-of-type {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+.about {
+  grid-column:  1 ~'/' -1;
+  background: url(bus-and-flag.png) right 30px no-repeat;
+  h1 {
+    font-weight: 800;
+    font-size: 82px;
+    line-height: 106px; 
+    max-width: 800px;
+    margin-top: 50px;
+    margin-bottom: 60px;
+  }
+  &-low-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.button {
+  background-color: rgba(127, 159, 244, 1);
+  color: rgba(8, 15, 39, 1);
+  font-weight: 600;
+  font-size: 20px;
+  padding: 17px 76px;
+  border-radius: 50px;
+  border: none;
+  outline: none;
+}
+
+.social-links {
+  display: flex;
+  flex-direction: row;
+  li {
+    margin-right: 25px;
+    &:last-of-type {
+      margin-right: 0;
+    }
+    a {
+      height: 26px;
+      width: 26px;
+      display: block;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+  .facebook {
+    background-image: url(facebook-fill.svg);
+  }
+  .instagram {
+    background-image: url(instagram-fill.svg);
+  }
+  .twitter {
+    background-image: url(twitter-fill.svg);
+  }
+}
+
+.lorem {
+  grid-column: 1 ~"/" -1;
+  padding-top: 70px;
+  padding-bottom: 70px;
+  h2 {
+    margin-bottom: 30px;
+  }
+}
+
+.cookie {
+  background-color: rgba(8, 15, 39, 1);
+  color: white;
+  font-size: 13px;
+  position: sticky;
+  bottom: 0;
+  .container {
+    bottom: 0;
+    z-index: 100;
+    height: 69px;
+    display: flex;
+    align-items: center;
+    a {
+      text-decoration: underline; 
+    }
+  }
+  .submit {
+    height: 33px;
+    padding: 11px 25px;
+    font-weight: 600;
+    font-size: 14px;
+    background-color: white;
+    line-height: 98%;
+    cursor: pointer;
+  }
+  .close {
+    width: 15px;
+    height: 15px;
+    background: url(cross.svg) center no-repeat;
+    outline: none;
+    border: none; 
+    cursor: pointer;
+  }
+}
